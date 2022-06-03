@@ -121,7 +121,7 @@ color: #111111;
     background: #2ECC71;
     border-radius: 50%;
     background-position: center;
-    
+    opacity: 0.7;
 }
 .main-list-text{
     font-family: 'Roboto';
@@ -178,7 +178,7 @@ color: #111111;
     width: 497px;
     height: 104px;
     margin-top: 22px;
-    
+    margin-bottom: 34px;
     color: #696969;
 }
 .email{
@@ -278,27 +278,39 @@ color: #111111;
     background-repeat: no-repeat;
     width: 60px;
     height: 60px;
-    
+    position: relative;
 }
-.bottom-list-item:hover{
+/* .bottom-list-item:hover{
     
     background: rgba(46, 204, 113, 0.5);
 transform: matrix(-1, 0, 0, 1, 0, 0);
-}
+opacity: 0.7;
+} */
 .bottom-container{
     width: 800px;
     align-self:center;
     margin-top: 60px;
     margin-bottom: 66px;
 }
-.last{
-    background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);    
-    
+.last::after{
+    content: "";
+  position: absolute;
+  left: 0px;
+  top: 0;
+  background: linear-gradient(270deg, #f6f3f3 0%, rgba(255, 255, 255, 0) 100%);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  width: 60px;
+  height: 60px;
 }
-.first{
-    background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-transform: matrix(-1, 0, 0, 1, 0, 0);
-
+.first::before{
+    content: "";
+  position: absolute;
+  left: 0px;
+  top: 0;
+  background: linear-gradient(270deg, #f6f3f3 0%, rgba(255, 255, 255, 0) 100%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  width: 60px;
+  height: 60px;
     
 }
 .bottom-item-ball{
@@ -378,3 +390,38 @@ color: #696969;
         
     
 }
+@media screen and (max-width:1024px){
+    .head{
+        width: 1024px;
+    }
+    .get-notified{
+        width: 1024px;
+    }
+    .bottom{
+        width:1024px;
+    }
+    .links{
+        width: 1024px;
+        padding-left: 230px;
+    }
+   .main-list{
+       display: inline;
+       margin-left: 50px;
+   }
+   .main-list-ball{
+       margin-left: 40%;
+   }
+   .bottom-list-item:nth-child(2){
+       display: none;
+   }
+   .bottom-list-item:nth-child(3){
+    display: none;
+}
+.bottom-list-item:nth-child(4){
+    display: none;
+}
+.bottom-list-item:nth-child(5){
+    display: none;
+}
+}
+  
